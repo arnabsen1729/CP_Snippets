@@ -53,7 +53,7 @@ typedef set<LL> SLL;
 
 //IO
 #define sync ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0)
-#define test int t;cin>>t;while(t--){solve();}
+#define test LL t;cin>>t;while(t--){solve();}
 
 template <class C> void setmin(C &a,C b){if(a>b)a=b;}
 template <class C> void setmax(C &a,C b){if(a<b)a=b;}
