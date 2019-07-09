@@ -6,6 +6,8 @@ using namespace std;
     SIZE: The largest number to be checked
     N.B make sure the data types used are compatible with SIZE
         and avoid overflow
+
+    Time complexity : O(n*log(log(n)))
 */
 
 //-------------------------------------------------------
@@ -16,9 +18,9 @@ bool is_prime[SIZE];
 void sieve(){
     is_prime[0]=false;
     is_prime[1]=false;
-    for(int i=2; i<SIZE; i++){
+    for(int i=2; i*i<=SIZE; i++){
         if(is_prime[i]){
-            for(int p=2*i; p<SIZE; p+=i)
+            for(int p=i*i; p<SIZE; p+=i)
                 is_prime[p]=false;
         }
     }
